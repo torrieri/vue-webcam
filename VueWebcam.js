@@ -3,7 +3,7 @@
 // 2. Improve options handling
 // 3. Error handling
 
-const Vue = require('vue');
+import Vue from 'vue';
 
 const WebcamComponent = Vue.extend({
     render: function (h) {
@@ -113,4 +113,4 @@ const WebcamComponent = Vue.extend({
 
 const VueWebcam = Vue.component('vue-webcam', WebcamComponent);
 
-module.exports = VueWebcam;
+export default { VueWebcam };

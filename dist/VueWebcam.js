@@ -1,13 +1,16 @@
 'use strict';
 
-// TODO:
-// 1. Enable mirror option
-// 2. Improve options handling
-// 3. Error handling
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-var Vue = require('vue');
+var _vue = require('vue');
 
-var WebcamComponent = Vue.extend({
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WebcamComponent = _vue2.default.extend({
     render: function render(h) {
         return h('video', {
             ref: 'video',
@@ -115,8 +118,11 @@ var WebcamComponent = Vue.extend({
     destroyed: function destroyed() {
         console.log('Destroyed');
     }
-});
+}); // TODO:
+// 1. Enable mirror option
+// 2. Improve options handling
+// 3. Error handling
 
-var VueWebcam = Vue.component('vue-webcam', WebcamComponent);
+var VueWebcam = _vue2.default.component('vue-webcam', WebcamComponent);
 
-module.exports = VueWebcam;
+exports.default = { VueWebcam: VueWebcam };
